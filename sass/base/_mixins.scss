@@ -1,0 +1,56 @@
+@mixin transition($args) {
+  -webkit-transition: $args;
+     -moz-transition: $args;
+       -o-transition: $args;
+          transition: $args;
+}
+
+@mixin transform($args) {
+  -webkit-transform: $args;
+     -moz-transform: $args;
+      -ms-transform: $args;
+       -o-transform: $args;
+          transform: $args;
+}
+
+@mixin border-radius($args){
+  -webkit-border-radius: $args;
+     -moz-border-radius: $args;
+          border-radius: $args;
+}
+
+@mixin filter($args) {
+  -webkit-filter: $args;
+     -moz-filter: $args;
+      -ms-filter: $args;
+       -o-filter: $args;
+          filter: $args;
+}
+
+@mixin box-shadow( $args) {
+  -webkit-box-shadow: $args;
+     -moz-box-shadow: $args;
+          box-shadow: $args;
+}
+
+@mixin user-select( $args) {
+  -webkit-user-select: $args;
+     -moz-user-select: $args;
+      -ms-user-select: $args;
+       -o-user-select: $args;
+          user-select: $args;
+}
+
+@mixin transition-property($property...) {
+    -moz-transition-property:    $property;
+    -o-transition-property:      $property;
+    -webkit-transition-property: $property;
+    transition-property:         $property;
+}
+
+@mixin transition-duration($duration...) {
+    -moz-transition-duration:    $duration;
+    -o-transition-duration:      $duration;
+    -webkit-transition-duration: $duration;
+    transition-duration:         $duration;
+}

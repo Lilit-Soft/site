@@ -1,0 +1,41 @@
+/************************
+       FancyBox
+************************/
+.fancy-box {
+	display: none;
+}
+.fancy-box > div {
+    width: 25%;
+    min-height: 1px;
+}
+.fancybox-close{
+    background-image: url('../images/fancy-close.png');
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 9999;
+}
+.fancybox-prev {
+    left: 0;
+    background-image: url('../images/fancy-left.png');
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+}
+
+.fancybox-next {
+    right: 0;
+    background-image: url('../images/fancy-right.png');
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+}
+.fancybox-skin{
+    background-color: #e74c3c;
+}
+.fancybox-error {
+  color: #ffffff;
+}
+.fancybox-overlay-fixed{
+background-color: rgba(0, 0, 0, 0.882353);
+}

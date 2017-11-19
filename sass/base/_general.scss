@@ -1,0 +1,231 @@
+body {
+	overflow-x: hidden;
+	text-align: center;
+	font-family : 'RaleWay';
+}
+.small-container {
+	max-width: 845px;
+}
+.container {
+	max-width: 960px;
+}
+.container-max {
+	max-width: 1160px;
+	@media screen and (max-width: $desktop-breakpoint) {
+		max-width: 960px;
+	}
+}
+.container, .small-container, .container-max {
+  	width: 100%;
+  	margin: 0 auto;
+  	@media screen and (max-width: $tablet-breakpoint) {
+		max-width: 720px;
+	}
+	@media screen and (max-width: $mobile-breakpoint) {
+		max-width: 420px;
+	}
+	@media screen and (max-width: $small-screen-breakpoint) {
+		max-width: 320px;
+	}
+}
+.clearfix {
+  &:before,
+  &:after {
+      content: '';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+      clear: both;
+  }
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.list-inline {
+	display: inline-block;
+	vertical-align: middle;
+}
+.button {
+	border: 1px solid $base-color;
+	border-radius: 15px;
+	display: inline-block;
+}
+.padding {
+	padding: 10em;
+	@media screen and (max-width: $mobile-breakpoint) {
+		padding: 5em 0 4em;
+	}
+}
+.heading-2 {
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 36px;
+}
+.hidden-tablet {
+	@media screen and (max-width: $tablet-breakpoint) {
+		visibility: hidden;
+	}
+}
+.hidden-mobile {
+	@media screen and (max-width: $mobile-breakpoint) {
+		visibility: hidden;
+	}
+}
+.paragraph {
+	color: #879cb0;
+	font-size: 16px;
+	font-weight: 300;
+	padding: 2em 0;
+	line-height: 1.5;
+	letter-spacing: 1px;
+}
+.button-site {
+	display: inline-block;
+	border: none;
+	background: #fcb84b;
+	font-size: $font-size;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 0.5em 1em;
+    color: $base-color;
+}
+.button-read {
+	border: none;
+	line-height: 2.5;
+	background: $third-color;
+	font-size: 13px;
+	font-weight: 600;
+	padding: 0.5em 2em;
+    color: #eff3f3;
+}
+.righttoleft {
+	direction: rtl;
+}
+.lefttoright {
+	direction: ltr;
+}
+.people-box {
+	background-color: #e3e2e2;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	&::after {
+		background-color: $base-color;
+		content: " ";
+		display: block;
+		height: 16px;
+		width: 20px;
+		position: absolute;
+		right: -10px;
+		top: 20px;
+		@include transform(rotate(-29deg) skew(35deg));
+		@media screen and (max-width: $mobile-breakpoint) {
+			display: none;
+		}
+	}
+}
+
+.rocket {
+    position: relative;
+    z-index: 10;
+    width: 100px;
+    margin: auto; 
+    &.back {
+    	@include transform(rotate(180deg));
+    }
+}
+
+/************************
+       Colors
+************************/
+/************************
+       How we work
+************************/
+.color1 {
+	color: #fd5f42;
+}
+
+.color2 {
+	color: #f7c640;
+}
+
+.color3 {
+	color: #26cbbe;
+}
+
+.color4 {
+	color: #a8cf69;
+}
+
+.color5 {
+	color: #3b99d8;
+}
+
+.bgcolor1 {
+	background-color: #fd5f42;
+}
+
+.bgcolor2 {
+	background-color: #f7c640;
+}
+
+.bgcolor3 {
+	background-color: #26cbbe;
+}
+
+.bgcolor4 {
+	background-color: #a8cf69;
+}
+
+.bgcolor5 {
+	background-color: #3b99d8;
+} 
+/************************
+     	Pricing
+************************/
+.bgcolor6 {
+	background-color: #5399c7;
+}
+
+.bgcolor7 {
+	background-color: #2ecc71;
+}
+
+.bgcolor8 {
+	background-color: #e74c3c;
+} 
+/************************
+      Blog post
+************************/
+.bgcolor9 {
+	background-color: #2ecc71;
+}
+
+.bgcolor10 {
+	background-color: #a469bd;
+}
+
+.bgcolor11 {
+	background-color: #16a085;
+}
+
+.bgcolor12 {
+	background-color: #5399c7;
+}
+
+.bgcolor13 {
+	background-color: #f39c12;
+}
+
+.bgcolor14 {
+	background-color: #e74c3c;
+}
+ 
+.bgcolor15 {
+	background-color: #16a085;
+}

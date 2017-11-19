@@ -1,0 +1,186 @@
+.site-header{
+	font-family : 'RaleWay';
+	text-align: center;
+	letter-spacing: 0.5px;
+	background-color: $header-background-color;
+	color: $base-color;
+	.container {
+		nav {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			background-color: $header-background-color;
+			z-index: 8000;
+			ul {
+				font-family: 'Open Sans', sans-serif;
+				text-transform: uppercase;
+				font-weight: 800;
+				li {
+					display: inline-block;
+					padding: 5em 0 1em;
+					border-radius: 0 0 5px 5px;
+					a {
+						color: $base-color;
+						font-size: $font-size;
+						padding: 5px 10px;
+						@media screen and (max-width: $tablet-breakpoint) {
+							font-size: 12px;
+							padding: 5px;
+						}
+						@media screen and (max-width: $mobile-breakpoint) {
+							font-size: 14px; 
+							padding: 0;
+						}
+					}
+					&.logo {
+						padding:1em 0.5em 1em;
+						background-color: $base-color;
+						margin: 0 1em;
+						@media screen and (max-width: $mobile-breakpoint) {
+							display: none;
+						}
+					}
+					&.active {
+						background-color: $base-color;
+						a {
+							color: $header-background-color;
+						}
+						@media screen and (max-width: $mobile-breakpoint) {
+							position: absolute;
+							right: 0;
+							top: 0;
+							left: 0;
+							border: none;
+							background: none;
+							a {
+								color: $base-color;
+								font-size: 1.5em;
+							}
+						}
+					}
+					@media screen and (max-width: $mobile-breakpoint) {
+						display: block;
+						margin: 0;
+						padding: 1em;
+						text-align: center;
+						background: inherit;
+						border-bottom: 5px solid rgba(0, 0, 0, 0.1);
+					}
+				}
+			}
+			input {
+				&.trigger {
+					position: absolute;
+					top: -9999px;
+					left: -9999px;
+					~ ul {
+						@media screen and (max-width: $mobile-breakpoint) {
+			      			text-align: left;
+							overflow:hidden;
+							max-height:0px;
+						}
+					}
+					&:checked ~ ul {
+						@media screen and (max-width: $mobile-breakpoint) {
+						    max-height: 600px;
+						    @include transition(max-height 500ms ease);
+						}
+		      		}
+		      		&:checked > label:after {
+		      			left: 1.5em;
+		      		}
+				}
+			}
+			div {
+				&.clearfix {
+					position: relative;
+					z-index: 999999;
+					@media screen and (max-width: $mobile-breakpoint) {
+						border-bottom: 5px solid rgba(0, 0, 0, 0.1);
+					}
+				}
+			}
+			.navbutton {
+				min-height:4em;
+				width: 4.5em;
+				cursor:pointer;
+				&:after {
+					content:"\2261";
+					font-size: 3.5em;
+					color: $base-color;
+				}
+				@media(min-width:$flex-nav-breakpoint) {
+					display: none;
+				}
+				@media screen and (max-width: $mobile-breakpoint) {
+					float: left;
+				}
+			}
+		}
+	}
+	.fixed{
+	    height: 100%;
+	    width: 100%;
+	    background-color: $header-background-color;
+	    position: relative;
+	}
+	.nav-absolute{
+	    position: absolute;
+	    width: 100%;
+	    left: 0;
+	    bottom:0;
+	    z-index: 99999;
+	}
+	.navbar-top{
+	    position: fixed;
+	    right: 0;
+	    left: 0;
+	    top: 0;
+	    z-index: 9999;
+	    text-align: center;
+	}
+	.container {
+		h3 {
+			font-size: $font-size;
+			font-weight: 100;
+			margin-top: 3em;
+			span {
+				font-weight: 800;
+			}
+		}
+		h1 {
+			font-size: 50px;
+			line-height: 1.5;
+			&:nth-child(3) {
+				margin-top: 0.8em;
+			}
+			&:nth-child(4) {
+				margin-bottom: 0.8em;
+			}
+			i {
+				color: $second-color;
+			}
+			@media screen and (max-width: $small-screen-breakpoint) {
+				font-size: 42px;
+			}
+		}
+		a {
+			color: $second-color;
+			padding: 15px 40px;
+			font-size: $font-size;
+			border-radius: 20px;
+			&.logo-mobile-visible {
+				display: none;
+				background-color: $base-color;
+				padding: 1em;
+				border-radius: 0 0 15px 15px;
+				line-height: 1.5;
+				margin: 1em 0;
+				@media screen and (max-width: $mobile-breakpoint) {
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
